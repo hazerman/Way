@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title lang="en">Way</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title lang="en">Way</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
 
-</body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
+    <header class="header">
+
+      <h1 class="visually-hidden">Way - сервис поиска туров</h1>
+
+      <div class="header__top">
+        <div class="header__logo">
+          <svg class="header__logo-svg" width="57" height="22" aria-hidden="true" focusable="false">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </div>
+        <button class="header__button-toggle header__button-toggle--no-js" type="button" aria-hidden="true">
+          <span class="visually-hidden">Открыть/закрыть меню</span>
+        </button>
+        <nav class="header__nav header__nav--no-js">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#">
+                О путешествии
+                <svg class="header__nav-arrow" width="8" height="12" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-menu-arrow"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">
+                Цены
+                <svg class="header__nav-arrow" width="8" height="12" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-menu-arrow"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a href="tel:+749978468446" class="header__phone-number">
+          <svg class="header__phone-svg" width="17" height="24" aria-hidden="true" focusable="false">
+            <use xlink:href="#icon-phone"></use>
+          </svg>
+          +7 (499) -784-684-46
+        </a>
+      </div>
+      <div class="header__bottom">
+        <div class="header__container">
+          <div class="header__promo">
+            <h2 class="header__title">
+              Путешествие по Европе
+            </h2>
+            <p class="header__description">
+              В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.
+            </p>
+            <a class="header__button button" href="#">
+              Смотреть тур
+              <svg class="header__button-arrow" width="16" height="16" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <script src="js/script.min.js"></script>
+  </body>
 </html>
