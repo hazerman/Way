@@ -12,6 +12,9 @@ body {
   min-width: $mobile-width;
 
   font-family: $font-stack;
+  color: $dark-color;
+
+  background-color: $white;
 }
 
 img {

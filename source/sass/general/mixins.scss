@@ -1,0 +1,47 @@
+@mixin font-size-height($f-size, $f-height) {
+  font-size: $f-size;
+  line-height: $f-height;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin reset-m-p {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin pad-center($pad) {
+  padding-left: $pad;
+  padding-right: $pad;
+}
+
+@mixin center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin container {
+  @include pad-center($screen-padding);
+  @include center;
+  width: $full-width;
+
+  @media (max-width: $full-width - 1) {
+    width: 100%;
+    margin: 0;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    @include pad-center($screen-padding-mob);
+  }
+}
+
+@mixin pseudo($pos, $content: "") {
+  content: $content;
+
+  position: $pos;
+}
