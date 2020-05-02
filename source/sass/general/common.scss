@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: $mobile-width;
+
+  font-family: $font-stack;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
