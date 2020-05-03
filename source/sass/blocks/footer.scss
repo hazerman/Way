@@ -1,0 +1,136 @@
+.footer {
+  padding-bottom: 75px;
+
+  color: $darkest-color;
+
+  @media (max-width: $desktop-width - 1) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    text-align: center;
+  }
+}
+
+.footer__container {
+  @include container;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet-width - 1) {
+    display: block;
+  }
+}
+
+.footer__wrapper {
+  width: 33%;
+
+  @media (max-width: $desktop-width - 1) {
+    width: 50%;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  &:not(:last-of-type) {
+    border-right: 1px solid #d7d9df;
+
+    @media (max-width: $tablet-width - 1) {
+      border-right: none;
+      border-bottom: 1px solid #d7d9df;
+    }
+  }
+
+  &:first-of-type {
+    padding-left: 14px;
+
+    @media (max-width: $desktop-width - 1) {
+      padding-left: 0;
+    }
+  }
+
+  &:nth-of-type(2) {
+    padding-left: 90px;
+
+    @media (max-width: $desktop-width - 1) {
+      padding-left: 50px;
+
+      border-right: none;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      padding-left: 0;
+    }
+  }
+
+  &:last-of-type {
+    padding-left: 49px;
+
+    @media (max-width: $desktop-width - 1) {
+      width: 100%;
+      margin-top: 30px;
+      padding-top: 30px;
+      padding-left: 0;
+
+      text-align: center;
+
+      border-top: 1px solid #d7d9df;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      margin-top: 0;
+      border-top: none;
+    }
+  }
+}
+
+.footer__heading {
+  @include reset-m-p;
+  margin-bottom: 20px;
+
+  @include font-size-height(18px, 32px);
+  font-weight: 600;
+}
+
+.footer__tours-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet-width - 1) {
+    justify-content: center;
+  }
+}
+
+.footer__tour-list {
+  @include list;
+  width: 33%;
+
+  @include font-size-height(14px, 17px);
+  color: rgba($darkest-color, 0.5);
+
+  @media (max-width: $tablet-width - 1) {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__contacts-list {
+  @include list;
+
+  li {
+    margin-bottom: 15px;
+  }
+}
+
+.footer__info {
+  @include reset-m-p;
+
+  @include font-size-height(14px, 24px);
+  color: rgba($darkest-color, 0.5);
+}
