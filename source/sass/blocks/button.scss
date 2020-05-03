@@ -12,6 +12,7 @@
   text-align: center;
 
   background-color: $accent-color;
+  border: none;
 
   @media (max-width: $desktop-width - 1) {
     width: 250px;
@@ -19,11 +20,15 @@
     min-height: 50px;
     padding-top: 19px;
     padding-bottom: 19px;
+
+    @include font-size-height(10px, 12px);
+    font-weight: 500;
   }
 
   @media (max-width: $tablet-width - 1) {
     @include center;
     width: 288px;
+    max-width: 288px;
 
   }
 }
