@@ -38,6 +38,12 @@
   a {
     color: inherit;
     text-decoration: none;
+
+    &:hover {
+      @media (min-width: $desktop-width) {
+        color: rgba($dark-color, 0.7);
+      }
+    }
   }
 
   &--current {

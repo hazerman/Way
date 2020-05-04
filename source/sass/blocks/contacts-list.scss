@@ -28,6 +28,13 @@
         display: block;
         text-decoration: underline;
       }
+
+      &:hover {
+        @media (min-width: $desktop-width) {
+          color: $accent-color;
+          text-decoration: underline;
+        }
+      }
     }
 
     svg {
@@ -65,6 +72,19 @@
   align-items: center;
 
   color: inherit;
+
+  &:hover {
+    @media (min-width: $desktop-width) {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  &:active {
+    @media (min-width: $desktop-width) {
+      opacity: 0.7;
+    }
+  }
 }
 
 .contacts-list__svg-phone {

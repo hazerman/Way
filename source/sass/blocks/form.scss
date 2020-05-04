@@ -27,11 +27,22 @@
 
   @include font-size-height(14px, 17px);
 
-  border: 1px solid rgba(44, 46, 63, 0.3);
+  border: 1px solid rgba($dark-color, 0.3);
 
   @media (max-width: $tablet-width - 1) {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  &:hover {
+    @media (min-width: $desktop-width) {
+      border-color: $dark-color;
+    }
+  }
+
+  &:focus {
+    border-color: $accent-h-color;
+    outline: none;
   }
 
   &::placeholder {
