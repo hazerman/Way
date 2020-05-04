@@ -1,0 +1,337 @@
+.tabs-menu__container {
+  @include container;
+  padding-bottom: 240px;
+
+  @media (max-width: $desktop-width - 1) {
+    overflow: hidden;
+
+    padding-bottom: 80px;
+  }
+}
+
+.tabs-menu__tab-list {
+  @include list;
+  display: flex;
+  width: 899px;
+  padding-bottom: 15px;
+  margin-bottom: 95px;
+
+  @include font-size-height(20px, 24px);
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  color: rgba($dark-color, 0.3);
+
+  border-bottom: 1px solid rgba($dark-color, 0.3);
+
+  @media (max-width: $desktop-width - 1) {
+    margin-left: 18px;
+    margin-bottom: 33px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.tabs-menu__tab-item {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &--current {
+    @include current;
+    color: $accent-color;
+  }
+
+  &:not(:last-child) {
+    margin-right: 99px;
+  }
+}
+
+.tabs-menu__main-info {
+  display: flex;
+  align-items: flex-start;
+
+  @media (max-width: $desktop-width - 1) {
+    display: block;
+  }
+}
+
+.tabs-menu__countries-info {
+  width: 425px;
+  margin-right: auto;
+
+  @media (max-width: $desktop-width - 1) {
+    position: relative;
+
+    width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 80px;
+
+    text-align: center;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.tabs-menu__countries-list {
+  @include list;
+}
+
+.tabs-menu__countries-item {
+  position: relative;
+
+  display: none;
+
+  @media (max-width: $desktop-width - 1) {
+    position: static;
+  }
+
+  &--current {
+    display: block;
+  }
+
+  &::after {
+    @include pseudo(absolute);
+    top: -10px;
+    left: calc(100% + 100px);
+    z-index: -1;
+
+    width: 430px;
+    height: 596px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (max-width: $desktop-width - 1) {
+      top: 100%;
+      left: $screen-padding * -1;
+
+      width: 100vw;
+      height: 0;
+      padding-bottom: 57%;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      left: $screen-padding-mob * -1;
+
+      padding-bottom: 144%;
+    }
+  }
+
+  &:first-child {
+    &::after {
+      background-image: url("../img/bg-feedback-greece-desktop@1x.jpg");
+
+      @media (min-resolution: $retina) {
+        background-image: url("../img/bg-feedback-greece-desktop@2x.jpg");
+      }
+
+      @media (max-width: $desktop-width - 1) {
+        background-image: url("../img/bg-feedback-greece-tablet@1x.jpg");
+
+        @media (min-resolution: $retina) {
+          background-image: url("../img/bg-feedback-greece-tablet@2x.jpg");
+        }
+      }
+
+      @media (max-width: $tablet-width - 1) {
+        background-image: url("../img/bg-feedback-greece-mobile@1x.jpg");
+
+        @media (min-resolution: $retina) {
+          background-image: url("../img/bg-feedback-greece-mobile@2x.jpg");
+        }
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    &::after {
+      background-image: url("../img/bg-feedback-albania-desktop@1x.jpg");
+
+      @media (min-resolution: $retina) {
+        background-image: url("../img/bg-feedback-albania-desktop@2x.jpg");
+      }
+
+      @media (max-width: $desktop-width - 1) {
+        background-image: url("../img/bg-feedback-albania-tablet@1x.jpg");
+
+        @media (min-resolution: $retina) {
+          background-image: url("../img/bg-feedback-albania-tablet@2x.jpg");
+        }
+      }
+
+      @media (max-width: $tablet-width - 1) {
+        background-image: url("../img/bg-feedback-albania-mobile@1x.jpg");
+
+        @media (min-resolution: $retina) {
+          background-image: url("../img/bg-feedback-albania-mobile@2x.jpg");
+        }
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      background-image: url("../img/bg-feedback-macedonia-desktop@1x.jpg");
+
+      @media (min-resolution: $retina) {
+        background-image: url("../img/bg-feedback-macedonia-desktop@2x.jpg");
+      }
+
+      @media (max-width: $desktop-width - 1) {
+        background-image: url("../img/bg-feedback-macedonia-tablet@1x.jpg");
+
+        @media (min-resolution: $retina) {
+          background-image: url("../img/bg-feedback-macedonia-tablet@2x.jpg");
+        }
+      }
+
+      @media (max-width: $tablet-width - 1) {
+        background-image: url("../img/bg-feedback-macedonia-mobile@1x.jpg");
+
+        @media (min-resolution: $retina) {
+          background-image: url("../img/bg-feedback-macedonia-mobile@2x.jpg");
+        }
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    &::after {
+      background-image: url("../img/bg-feedback-montenegro-desktop@1x.jpg");
+
+      @media (min-resolution: $retina) {
+        background-image: url("../img/bg-feedback-montenegro-desktop@2x.jpg");
+      }
+
+      @media (max-width: $desktop-width - 1) {
+        background-image: url("../img/bg-feedback-montenegro-tablet@1x.jpg");
+
+        @media (min-resolution: $retina) {
+          background-image: url("../img/bg-feedback-montenegro-tablet@2x.jpg");
+        }
+      }
+
+      @media (max-width: $tablet-width - 1) {
+        background-image: url("../img/bg-feedback-montenegro-mobile@1x.jpg");
+
+        @media (min-resolution: $retina) {
+          background-image: url("../img/bg-feedback-montenegro-mobile@2x.jpg");
+        }
+      }
+    }
+  }
+
+  &:nth-child(5) {
+    &::after {
+      background-image: url("../img/bg-feedback-croatia-desktop@1x.jpg");
+
+      @media (min-resolution: $retina) {
+        background-image: url("../img/bg-feedback-croatia-desktop@2x.jpg");
+      }
+
+      @media (max-width: $desktop-width - 1) {
+        background-image: url("../img/bg-feedback-croatia-tablet@1x.jpg");
+
+        @media (min-resolution: $retina) {
+          background-image: url("../img/bg-feedback-croatia-tablet@2x.jpg");
+        }
+      }
+
+      @media (max-width: $tablet-width - 1) {
+        background-image: url("../img/bg-feedback-croatia-mobile@1x.jpg");
+
+        @media (min-resolution: $retina) {
+          background-image: url("../img/bg-feedback-croatia-mobile@2x.jpg");
+        }
+      }
+    }
+  }
+}
+
+.tabs-menu__country-name {
+  position: relative;
+
+  display: block;
+  margin-bottom: 53px;
+
+  @include font-size-height(55px, 90px);
+  font-weight: 600;
+  letter-spacing: -1.2px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 20px;
+
+    @include font-size-height(30px, 45px);
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    @include font-size-height(24px, 36px);
+  }
+
+  &::after {
+    @include pseudo(absolute);
+    bottom: -20px;
+    left: 0;
+
+    width: 175px;
+    height: 3px;
+
+    background-color: $accent-color;
+
+    @media (max-width: $desktop-width - 1) {
+      display: none;
+    }
+  }
+}
+
+.tabs-menu__country-description {
+  @include reset-m-p;
+  width: 370px;
+  margin-bottom: 50px;
+
+  @include font-size-height(16px, 28px);
+  letter-spacing: -0.5px;
+  color: rgba($dark-color, 0.7);
+
+  @media (max-width: $desktop-width - 1) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.tabs-menu__button {
+  width: 250px;
+
+  @media (max-width: $desktop-width - 1) {
+    @include center;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    width: 288px;
+  }
+}
+
+
+
+
+
+
+.tabs-menu__reviews {
+  margin-top: 99px;
+
+  @media (max-width: $desktop-width - 1) {
+    @include center;
+    margin-top: 0;
+
+  }
+
+
+}
