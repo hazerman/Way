@@ -1,0 +1,10 @@
+.main__map-wrapper {
+  background-image: url("../../img/map.svg");
+  background-repeat: no-repeat;
+  background-position: top 20px center;
+  background-size: 1444px auto;
+
+  @media (max-width: $desktop-width - 1) {
+    background: none;
+  }
+}
