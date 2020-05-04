@@ -70,3 +70,19 @@
 .contacts-list__svg-phone {
   stroke: $accent-color;
 }
+
+.contact-list__mail {
+  &:first-of-type {
+    display: none;
+
+    @media (max-width: $desktop-width - 1) {
+      display: inline;
+    }
+  }
+
+  &:last-of-type {
+    @media (max-width: $desktop-width - 1) {
+      display: none;
+    }
+  }
+}
