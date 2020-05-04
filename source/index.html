@@ -45,12 +45,17 @@
             </li>
           </ul>
         </nav>
-        <a class="header__phone-number" href="tel:+749978468446">
-          <svg class="header__phone-svg" width="17" height="24" aria-hidden="true" focusable="false">
-            <use xlink:href="#icon-phone"></use>
-          </svg>
-          +7 (499) -784-684-46
-        </a>
+        <ul class="header__contacts-list contacts-list contacts-list--header">
+          <li class="contacts-list__item">
+            <a class="contacts-list__link" href="tel:+749978468446">
+              <svg class="contacts-list__svg-phone" width="17" height="24" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
+              +7 (499) -784-684-46
+            </a>
+          </li>
+        </ul>
+
       </div>
       <div class="header__bottom">
         <div class="header__container">
@@ -281,12 +286,16 @@
               <h2 class="offer__heading">Цены</h2>
               <p class="offer__description">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
               <p class="offer__subtitle">Свяжитесь с нами</p>
-              <a class="offer__phone-number" href="tel:+749978468446">
-                <svg class="offer__phone-svg" width="17" height="24" aria-hidden="true" focusable="false">
-                  <use xlink:href="#icon-phone"></use>
-                </svg>
-                +7 (499) -784-684-46
-              </a>
+              <ul class="offer__contacts-list contacts-list contacts-list--offer">
+                <li class="contacts-list__item">
+                  <a class="contacts-list__link" href="tel:+749978468446">
+                    <svg class="contacts-list__svg-phone" width="17" height="24" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-phone"></use>
+                    </svg>
+                    +7 (499) -784-684-46
+                  </a>
+                </li>
+              </ul>
             </div>
             <ul class="offer__price-list">
               <li class="offer__price-item offer__price-item--special">
@@ -414,12 +423,22 @@
         </div>
         <div class="footer__wrapper">
           <h3 class="footer__heading">Наши контакты</h3>
-          <ul class="footer__contacts-list">
-            <li>
-              <a href="">puteshestviemechta@gmail.ru</a>
+          <ul class="footer__contacts-list contacts-list contacts-list--footer">
+            <li class="contacts-list__item">
+              <a class="contacts-list__link" href="mailto:puteshestviemechta@gmail.ru">
+                <svg class="contacts-list__svg-mail" width="26" height="20" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-mail"></use>
+                </svg>
+                puteshestviemechta@gmail.ru
+              </a>
             </li>
-            <li>
-              <a href="">+7 (499) -784-684-46</a>
+            <li class="contacts-list__item">
+              <a class="contacts-list__link" href="tel:+749978468446">
+                <svg class="contacts-list__svg-phone" width="17" height="24" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+                +7 (499) -784-684-46
+              </a>
             </li>
           </ul>
         </div>
