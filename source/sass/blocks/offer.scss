@@ -1,0 +1,251 @@
+.offer__container {
+  @include container;
+  display: flex;
+  padding-bottom: 138px;
+
+  @media (max-width: $desktop-width - 1) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.offer__info {
+  order: 1;
+  width: 295px;
+  margin-top: 114px;
+
+  @media (max-width: $desktop-width - 1) {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 40px;
+  }
+}
+
+.offer__heading {
+  position: relative;
+
+  @include reset-m-p;
+  margin-bottom: 53px;
+
+  @include font-size-height(55px, 90px);
+  font-weight: 600;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 20px;
+
+    @include font-size-height(30px, 45px);
+  }
+
+  &::after {
+    @include pseudo(absolute);
+    bottom: -20px;
+    left: 0;
+
+    width: 175px;
+    height: 3px;
+
+    background-color: $accent-color;
+
+    @media (max-width: $desktop-width - 1) {
+      display: none;
+    }
+  }
+}
+
+.offer__description {
+  @include reset-m-p;
+  margin-bottom: 60px;
+
+  @include font-size-height(16px, 27px);
+  color: rgba($dark-color, 0.7);
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 20px;
+  }
+}
+
+.offer__subtitle {
+  @include reset-m-p;
+  margin-bottom: 13px;
+
+  @include font-size-height(22px, 34px);
+  font-weight: 500;
+  text-align: center;
+
+  @media (max-width: $desktop-width - 1) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 10px;
+  }
+}
+
+.offer__price-list {
+  @include list;
+  display: flex;
+  justify-content: space-between;
+  width: 780px;
+  margin-right: auto;
+
+  @media (max-width: $desktop-width - 1) {
+    @include pad-center(51px);
+    width: 100%;
+    margin-right: 0;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    @include pad-center(0);
+    display: block;
+  }
+}
+
+.offer__price-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 370px;
+  min-height: 672px;
+  padding: 40px 30px 30px;
+
+  border: 1px solid rgba($dark-color, 0.3);
+  border-radius: 6px;
+
+  @media (max-width: $desktop-width - 1) {
+    position: relative;
+
+    display: block;
+    width: 46%;
+    padding: 30px 20px;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &--special {
+
+    border-color: $accent-color;
+    box-shadow: 0 0 0 1px $accent-color, 0 0 0 1px $accent-color inset;
+
+    .offer__price-heading {
+      color: $accent-color;
+    }
+
+    .offer__price-count {
+      color: $accent-color;
+    }
+
+    .offer__price-description {
+      border-bottom-color: rgba($accent-color, 0.5);
+    }
+
+    svg {
+      fill: $darkest-color;
+    }
+  }
+}
+
+.offer__price-heading {
+  @include reset-m-p;
+  margin-right: auto;
+  margin-bottom: 40px;
+
+  @include font-size-height(28px, 38px);
+  font-weight: 600;
+  letter-spacing: -1.3px;
+  color: rgba($darkest-color, 0.7);
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 10px;
+
+    @include font-size-height(24px, 34px);
+  }
+}
+
+.offer__price-count {
+  @include font-size-height(25px, 34px);
+  font-weight: 700;
+  color: rgba($darkest-color, 0.7);
+
+  @media (max-width: $desktop-width - 1) {
+    display: block;
+    margin-bottom: 11px;
+  }
+}
+
+.offer__price-description {
+  @include reset-m-p;
+  margin-bottom: 30px;
+  padding-bottom: 28px;
+  padding-right: 25px;
+
+  @include font-size-height(16px, 24px);
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba($dark-color, 0.3);
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 31px;
+    padding-bottom: 10px;
+    padding-right: 0;
+  }
+}
+
+.offer__feature-list {
+  @include list;
+
+  @include font-size-height(16px, 32px);
+
+  @media (max-width: $desktop-width - 1) {
+    text-align: left;
+  }
+}
+
+.offer__feature-item {
+  display: flex;
+  margin-bottom: 15px;
+  padding-right: 30px;
+
+  @media (max-width: $desktop-width - 1) {
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.offer__feature-svg {
+  flex-shrink: 0;
+  margin-top: 10px;
+  margin-right: 8px;
+
+  fill: $accent-color;
+}
+
+.offer__button {
+  width: 100%;
+  margin-top: auto;
+
+  @media (max-width: $desktop-width - 1) {
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+
+    width: auto;
+    max-width: none;
+  }
+}
