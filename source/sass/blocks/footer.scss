@@ -120,14 +120,6 @@
   }
 }
 
-.footer__contacts-list {
-  @include list;
-
-  li {
-    margin-bottom: 15px;
-  }
-}
-
 .footer__info {
   @include reset-m-p;
 
