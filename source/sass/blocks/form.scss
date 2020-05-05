@@ -6,6 +6,21 @@
   @media (max-width: $tablet-width - 1) {
     display: block;
   }
+
+  &--modal {
+    .form_inputs-wrapper {
+      display: block;
+      margin-bottom: 0;
+    }
+
+    .form__input {
+      margin-bottom: 20px;
+
+      @media (max-width: $desktop-width - 1) {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .form_inputs-wrapper {
@@ -28,6 +43,10 @@
   @include font-size-height(14px, 17px);
 
   border: 1px solid rgba($dark-color, 0.3);
+
+  @media (max-width: $desktop-width - 1) {
+    width: 48.2%;
+  }
 
   @media (max-width: $tablet-width - 1) {
     width: 100%;

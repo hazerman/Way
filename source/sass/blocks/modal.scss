@@ -1,0 +1,128 @@
+.modal {
+  position: fixed;
+  top: 200px;
+  left: 50%;
+  z-index: 500;
+
+  display: none;
+  width: 728px;
+  min-height: 444px;
+  padding: 72px 61px 89px;
+
+  background-color: #f8f8f8;
+
+  transform: translateX(-50%);
+
+  @media (max-width: $desktop-width - 1) {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: auto;
+    padding-top: 100px;
+
+    background-color: $white;
+
+    transform: none;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    @include pad-center($screen-padding-mob);
+  }
+
+  &--show {
+    display: flex;
+  }
+
+  &--buy {
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/bg-buy-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 338px auto;
+
+      @media (min-resolution: $retina) {
+        background-image: url("../img/bg-buy-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--success {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.modal__wrapper {
+  width: 270px;
+  margin-left: auto;
+
+  @media (max-width: $desktop-width - 1) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.modal__heading {
+  @include reset-m-p;
+  margin-bottom: 50px;
+
+  @include font-size-height(25px, 43px);
+  font-weight: 600;
+  color: #48494d;
+  text-align: center;
+}
+
+.modal__phrase {
+  width: 400px;
+
+  @include font-size-height(25px, 43px);
+  font-weight: 500;
+  color: #48494d;
+  text-align: center;
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+  width: 72px;
+  height: 50px;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  @media (max-width: $tablet-width - 1) {
+    width: 50px;
+  }
+
+  &::before,
+  &::after {
+    @include pseudo(absolute);
+    top: 50%;
+    left: 50%;
+
+    width: 32px;
+    height: 1px;
+
+    background-color: #cdcacb;
+    box-shadow: none;
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+
+  &::after {
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
