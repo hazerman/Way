@@ -1,15 +1,15 @@
 .countries__container {
   @include container;
-  padding-top: 198px;
+  padding-top: 99px;
 
   @media (max-width: $desktop-width - 1) {
-    padding-top: 80px;
+    padding-top: 40px;
 
     text-align: center;
   }
 
   @media (max-width: $tablet-width - 1) {
-    padding-top: 108px;
+    padding-top: 69px;
   }
 }
 
@@ -22,12 +22,14 @@
 
   @include font-size-height(55px, 80px);
   font-weight: 600;
+  letter-spacing: -1.2px;
 
   @media (max-width: $desktop-width - 1) {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
 
     @include font-size-height(30px, 45px);
+    letter-spacing: normal;
   }
 
   @media (max-width: $tablet-width - 1) {
@@ -37,7 +39,7 @@
   &::after {
     @media (min-width: $desktop-width) {
       @include pseudo(absolute);
-      bottom: -30px;
+      bottom: -33px;
       left: 0;
 
       width: 228px;
@@ -50,7 +52,7 @@
 
 .countries__description {
   @include reset-m-p;
-  margin-bottom: 56px;
+  margin-bottom: 55px;
   width: 328px;
 
   @include font-size-height(16px, 28px);
@@ -59,12 +61,12 @@
 
   @media (max-width: $desktop-width - 1) {
     @include center;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
   }
 
   @media (max-width: $tablet-width - 1) {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 }
 
@@ -80,7 +82,7 @@
   }
 
   @media (max-width: $desktop-width - 1) {
-    @include pad-center(60px);
+    @include pad-center(61px);
   }
 
   @media (max-width: $tablet-width - 1) {
@@ -101,12 +103,22 @@
 
   @media (max-width: $desktop-width - 1) {
     margin-bottom: 19px;
-    width: 47.36%;
+    width: 47.59%;
   }
 
   @media (max-width: $tablet-width - 1) {
     width: 100%;
     margin-bottom: 35px;
+  }
+
+  &:last-child {
+    @media (max-width: $desktop-width - 1) {
+      margin-top: 11px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      margin-top: 0;
+    }
   }
 
   &:nth-child(3n+2):not(:last-child) {
@@ -198,6 +210,6 @@
   }
 
   &:active {
-    color: rgba($white, 0.7);;
+    color: rgba($white, 0.7);
   }
 }

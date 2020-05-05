@@ -1,7 +1,7 @@
 .button {
   display: block;
   min-height: 75px;
-  padding: 30px 39px;
+  padding: 29px 34px 29px 40px;
 
   @include font-size-height(12px, 15px);
   font-weight: 700;
@@ -20,8 +20,8 @@
     width: 250px;
     max-width: 250px;
     min-height: 50px;
-    padding-top: 19px;
-    padding-bottom: 19px;
+    padding-top: 21px;
+    padding-bottom: 17px;
 
     @include font-size-height(10px, 12px);
     font-weight: 500;

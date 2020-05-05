@@ -2,14 +2,16 @@
   @include container;
   display: flex;
   align-items: center;
-  padding-top: 39px;
-  padding-bottom: 39px;
+  padding-top: 35px;
+  padding-bottom: 33px;
 
   @media (max-width: $desktop-width - 1) {
     position: relative;
 
     @include reset-m-p;
     flex-wrap: wrap;
+
+    box-shadow: 0 4px 20px 0 rgba($black, 0.1);
   }
 }
 
@@ -19,11 +21,21 @@
   margin-right: auto;
 
   @media (max-width: $desktop-width - 1) {
-    margin-left: $screen-padding;
+    width: 44px;
+    height: auto;
+    margin-top: 7px;
+    margin-left: $screen-padding + 1px;
   }
 
   @media (max-width: $tablet-width - 1) {
     margin-left: $screen-padding-mob;
+  }
+
+  svg {
+    @media (max-width: $desktop-width - 1) {
+      width: 44px;
+      height: auto;
+    }
   }
 }
 
@@ -113,6 +125,8 @@
 }
 
 .header__nav {
+  margin-right: 60px;
+
   @media (max-width: $desktop-width - 1) {
     position: absolute;
     top: 0;
@@ -122,6 +136,7 @@
     display: none;
     padding-top: 82px;
     padding-bottom: 82px;
+    margin-right: 0;
     width: 100%;
     height: 100vh;
 
@@ -147,6 +162,8 @@
 .header__nav-list {
   @include list;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 650px;
 
   @include font-size-height(14px, 17px);
   font-weight: 500;
@@ -161,7 +178,7 @@
 }
 
 .header__nav-item {
-  margin-right: 40px;
+  margin-left: 40px;
 
   @media (max-width: $desktop-width - 1) {
     margin-right: 0;
@@ -206,6 +223,10 @@
   }
 }
 
+.header__contacts-list {
+  margin-right: 14px;
+}
+
 .header__bottom {
   min-height: 860px;
 
@@ -248,7 +269,7 @@
 
 .header__promo {
   width: 412px;
-  margin-top: 184px;
+  margin-top: 185px;
   margin-left: auto;
   margin-right: 58px;
 
@@ -272,21 +293,23 @@
 
 .header__title {
   @include reset-m-p;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 
   @include font-size-height(55px, 80px);
   font-weight: 600;
   letter-spacing: -1.1px;
 
   @media (max-width: $desktop-width - 1) {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 
     @include font-size-height(30px, 45px);
+    letter-spacing: normal;
   }
 
   @media (max-width: $tablet-width - 1) {
     min-height: 154px;
     margin-bottom: 20px;
+    padding-left: 6px;
 
     @include font-size-height(24px, 36px);
   }
@@ -294,14 +317,15 @@
 
 .header__description {
   @include reset-m-p;
-  margin-bottom: 39px;
+  margin-bottom: 33px;
+  padding-right: 30px;
 
   @include font-size-height(16px, 27px);
+  letter-spacing: -0.5px;
 
   @media (max-width: $desktop-width - 1) {
-    margin-bottom: 15px;
-
-    letter-spacing: -0.5px;
+    margin-bottom: 9px;
+    padding-right: 0;
   }
 
   @media (max-width: $tablet-width - 1) {
@@ -321,6 +345,8 @@
   @media (max-width: $desktop-width - 1) {
     @include center;
     width: 250px;
+    padding-top: 18px;
+    padding-bottom: 15px;
   }
 
   @media (max-width: $tablet-width - 1) {

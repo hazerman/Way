@@ -1,10 +1,60 @@
+.main {
+  padding-top: 100px;
+  padding-bottom: 120px;
+
+  @media (max-width: $desktop-width - 1) {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    padding-bottom: 30px;
+  }
+}
+
+.main__countries {
+  margin-bottom: -4px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 78px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 5px;
+  }
+}
+
 .main__map-wrapper {
   background-image: url("../../img/map.svg");
   background-repeat: no-repeat;
-  background-position: top 20px center;
+  background-position: top 142px center;
   background-size: 1444px auto;
 
   @media (max-width: $desktop-width - 1) {
     background: none;
+  }
+}
+
+.main__tabs-menu {
+  margin-bottom: 96px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 39px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 22px;
+  }
+}
+
+.main__offer {
+  margin-bottom: 68px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 55px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 11px;
   }
 }

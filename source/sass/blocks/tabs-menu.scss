@@ -1,11 +1,15 @@
 .tabs-menu__container {
   @include container;
-  padding-bottom: 240px;
+  padding-bottom: 160px;
 
   @media (max-width: $desktop-width - 1) {
     overflow: hidden;
 
-    padding-bottom: 80px;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    padding-bottom: 20px;
   }
 }
 
@@ -14,7 +18,7 @@
   display: flex;
   width: 899px;
   padding-bottom: 15px;
-  margin-bottom: 95px;
+  margin-bottom: 89px;
 
   @include font-size-height(20px, 24px);
   font-weight: 500;
@@ -25,7 +29,7 @@
 
   @media (max-width: $desktop-width - 1) {
     margin-left: 18px;
-    margin-bottom: 33px;
+    margin-bottom: 32px;
   }
 
   @media (max-width: $tablet-width - 1) {
@@ -52,7 +56,7 @@
   }
 
   &:not(:last-child) {
-    margin-right: 99px;
+    margin-right: 100px;
   }
 }
 
@@ -105,7 +109,7 @@
   &::after {
     @include pseudo(absolute);
     top: -10px;
-    left: calc(100% + 100px);
+    left: calc(100% + 45px);
 
     width: 430px;
     height: 596px;
@@ -265,14 +269,15 @@
   position: relative;
 
   display: block;
-  margin-bottom: 53px;
+  margin-bottom: 48px;
 
   @include font-size-height(55px, 90px);
   font-weight: 600;
   letter-spacing: -1.2px;
 
   @media (max-width: $desktop-width - 1) {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
+    letter-spacing: normal;
 
     @include font-size-height(30px, 45px);
   }
@@ -283,7 +288,7 @@
 
   &::after {
     @include pseudo(absolute);
-    bottom: -20px;
+    bottom: -17px;
     left: 0;
 
     width: 175px;
@@ -300,7 +305,7 @@
 .tabs-menu__country-description {
   @include reset-m-p;
   width: 370px;
-  margin-bottom: 50px;
+  margin-bottom: 49px;
 
   @include font-size-height(16px, 28px);
   letter-spacing: -0.5px;
@@ -308,7 +313,11 @@
 
   @media (max-width: $desktop-width - 1) {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 18px;
   }
 }
 
@@ -324,20 +333,12 @@
   }
 }
 
-
-
-
-
-
 .tabs-menu__reviews {
   position: relative;
-  margin-top: 99px;
+  margin-top: 104px;
 
   @media (max-width: $desktop-width - 1) {
     @include center;
     margin-top: 0;
-
   }
-
-
 }

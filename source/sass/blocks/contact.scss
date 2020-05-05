@@ -18,7 +18,7 @@
   background-size: 844px auto;
   background-position: top left;
 
-  transform: translateX(33px);
+  transform: translateX(32px);
 
   @media (min-resolution: $retina) {
     background-image: url("../img/bg-questions-desktop@2x.jpg");
@@ -50,7 +50,8 @@
 
 .contact__window {
   margin-left: auto;
-  padding: 49px;
+  margin-right: -15px;
+  padding: 50px 49px 49px 50px;
   width: 656px;
 
   text-align: center;
@@ -62,6 +63,7 @@
 
   @media (max-width: $desktop-width - 1) {
     width: 100%;
+    margin-right: 0;
   }
 
   @media (max-width: $tablet-width - 1) {
@@ -74,22 +76,23 @@
 
 .contact__heading {
   @include reset-m-p;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 
   @include font-size-height(25px, 32px);
   font-weight: 600;
 
   @media (max-width: $tablet-width - 1) {
-    margin-bottom: 19px;
+    margin-bottom: 20px;
   }
 }
 
 .contact__description {
-  margin-bottom: 24px;
+  @include reset-m-p;
+  margin-bottom: 23px;
 
   @include font-size-height(16px, 24px);
 
   @media (max-width: $tablet-width - 1) {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 }

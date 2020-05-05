@@ -1,6 +1,6 @@
 .reviews {
   width: 382px;
-  padding: 33px 20px 30px;
+  padding: 30px;
 
   background-color: $white;
 
@@ -10,7 +10,7 @@
 
   @media (max-width: $tablet-width - 1) {
     width: 268px;
-    padding: 30px 20px;
+    padding: 32px 20px;
 
     text-align: center;
   }
@@ -20,36 +20,29 @@
   position: relative;
 
   @include reset-m-p;
-  margin-bottom: 29px;
+  margin-bottom: 34px;
 
   @include font-size-height(30px, 37px);
   font-weight: 500;
   letter-spacing: -0.7px;
 
   @media (max-width: $desktop-width - 1) {
-    margin-bottom: 32px;
+    margin-bottom: 33px;
   }
 
   @media (max-width: $tablet-width - 1) {
-    margin-bottom: 31px;
-
     @include font-size-height(20px, 24px);
   }
 
   &::after {
     @include pseudo(absolute);
-    bottom: -7px;
-    left: 10px;
+    bottom: -12px;
+    left: 0;
 
     width: 68px;
     height: 1px;
 
     background-color: $accent-color;
-
-    @media (max-width: $desktop-width - 1) {
-      bottom: -10px;
-      left: 0;
-    }
 
     @media (max-width: $tablet-width - 1) {
       left: 50%;
@@ -73,8 +66,7 @@
 
 .reviews__text {
   @include reset-m-p;
-  @include pad-center(10px);
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 
   @include font-size-height(14px, 28px);
   letter-spacing: -0.4px;
@@ -82,10 +74,11 @@
 
   @media (max-width: $desktop-width - 1) {
     @include pad-center(0);
+    margin-bottom: 32px;
   }
 
   @media (max-width: $tablet-width - 1) {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 }
 
@@ -94,8 +87,9 @@
   align-items: center;
   width: 100%;
 
-  @include font-size-height(16px, 24px);
+  @include font-size-height(16px, 25px);
   font-weight: 500;
+  letter-spacing: -1px;
 
   @media (max-width: $tablet-width - 1) {
     flex-direction: column;
@@ -104,7 +98,7 @@
 
 .reviews__author-img {
   display: block;
-  margin-right: 15px;
+  margin-right: 16px;
 
   border-radius: 50%;
 

@@ -1,23 +1,29 @@
 .offer__container {
   @include container;
   display: flex;
-  padding-bottom: 138px;
+  padding-bottom: 70px;
 
   @media (max-width: $desktop-width - 1) {
     display: block;
     text-align: center;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    padding-bottom: 10px;
   }
 }
 
 .offer__info {
   order: 1;
   width: 295px;
-  margin-top: 114px;
+  margin-top: 112px;
+  margin-right: -6px;
 
   @media (max-width: $desktop-width - 1) {
     width: 100%;
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-right: 0;
+    margin-bottom: 29px;
   }
 
   @media (max-width: $tablet-width - 1) {
@@ -29,7 +35,7 @@
   position: relative;
 
   @include reset-m-p;
-  margin-bottom: 53px;
+  margin-bottom: 48px;
 
   @include font-size-height(55px, 90px);
   font-weight: 600;
@@ -40,9 +46,13 @@
     @include font-size-height(30px, 45px);
   }
 
+  @media (max-width: $tablet-width - 1) {
+    @include font-size-height(24px, 36px);
+  }
+
   &::after {
     @include pseudo(absolute);
-    bottom: -20px;
+    bottom: -17px;
     left: 0;
 
     width: 175px;
@@ -64,23 +74,27 @@
   color: rgba($dark-color, 0.7);
 
   @media (max-width: $desktop-width - 1) {
-    margin-bottom: 30px;
+    margin-bottom: 33px;
   }
 
   @media (max-width: $tablet-width - 1) {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 }
 
 .offer__subtitle {
   @include reset-m-p;
   margin-bottom: 13px;
+  margin-left: 9px;
 
   @include font-size-height(22px, 34px);
   font-weight: 500;
   text-align: center;
 
   @media (max-width: $desktop-width - 1) {
+    margin-left: 0;
+    margin-bottom: 11px;
+
     font-size: 18px;
   }
 
@@ -93,7 +107,7 @@
   @include list;
   display: flex;
   justify-content: space-between;
-  width: 780px;
+  width: 770px;
   margin-right: auto;
 
   @media (max-width: $desktop-width - 1) {
@@ -115,8 +129,9 @@
   align-content: flex-start;
   width: 370px;
   min-height: 672px;
-  padding: 40px 30px 30px;
+  padding: 39px 29px 29px;
 
+  background-color: $white;
   border: 1px solid rgba($dark-color, 0.3);
   border-radius: 6px;
 
@@ -125,6 +140,7 @@
 
     display: block;
     width: 46%;
+    min-height: 629px;
     padding: 30px 20px;
 
     border-bottom-left-radius: 0;
@@ -133,6 +149,7 @@
 
   @media (max-width: $tablet-width - 1) {
     width: 100%;
+    min-height: 600px;
     margin-bottom: 30px;
   }
 
@@ -143,6 +160,7 @@
 
     .offer__price-heading {
       color: $accent-color;
+      letter-spacing: normal;
     }
 
     .offer__price-count {
@@ -151,6 +169,16 @@
 
     .offer__price-description {
       border-bottom-color: rgba($accent-color, 0.5);
+    }
+
+    .offer__feature-item {
+      &:first-child {
+        margin-bottom: 7px;
+
+        @media (max-width: $desktop-width - 1) {
+          margin-bottom: 5px;
+        }
+      }
     }
 
     svg {
@@ -162,7 +190,7 @@
 .offer__price-heading {
   @include reset-m-p;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   @include font-size-height(28px, 38px);
   font-weight: 600;
@@ -189,8 +217,8 @@
 
 .offer__price-description {
   @include reset-m-p;
-  margin-bottom: 30px;
-  padding-bottom: 28px;
+  margin-bottom: 31px;
+  padding-bottom: 26px;
   padding-right: 25px;
 
   @include font-size-height(16px, 24px);
@@ -200,19 +228,25 @@
   border-bottom-color: rgba($dark-color, 0.3);
 
   @media (max-width: $desktop-width - 1) {
-    margin-bottom: 31px;
-    padding-bottom: 10px;
+    margin-bottom: 22px;
+    padding-bottom: 8px;
     padding-right: 0;
   }
 }
 
 .offer__feature-list {
   @include list;
+  min-height: 345px;
 
   @include font-size-height(16px, 32px);
 
   @media (max-width: $desktop-width - 1) {
     text-align: left;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    min-height: 200px;
+    margin-bottom: 46px;
   }
 }
 
@@ -230,7 +264,7 @@
 .offer__feature-svg {
   flex-shrink: 0;
   margin-top: 10px;
-  margin-right: 8px;
+  margin-right: 16px;
 
   fill: $accent-color;
 }

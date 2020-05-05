@@ -1,11 +1,5 @@
 .footer {
-  padding-bottom: 75px;
-
   color: $darkest-color;
-
-  @media (max-width: $desktop-width - 1) {
-    padding-bottom: 50px;
-  }
 
   @media (max-width: $tablet-width - 1) {
     text-align: center;
@@ -16,19 +10,22 @@
   @include container;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 72px;
+
+  @media (max-width: $desktop-width - 1) {
+    padding-top: 30px;
+    padding-bottom: 48px;
+  }
 
   @media (max-width: $tablet-width - 1) {
+    padding-top: 10px;
+    padding-bottom: 26px;
     display: block;
   }
 }
 
 .footer__wrapper {
-  width: 33%;
-
-  @media (max-width: $desktop-width - 1) {
-    width: 50%;
-  }
-
   @media (max-width: $tablet-width - 1) {
     width: 100%;
     padding-top: 30px;
@@ -44,35 +41,51 @@
   }
 
   &:first-of-type {
-    padding-left: 14px;
+    width: 34.5%;
+    padding-left: 13px;
 
     @media (max-width: $desktop-width - 1) {
+      width: 54.4%;
       padding-left: 0;
+      padding-right: 11px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      width: 100%;
     }
   }
 
   &:nth-of-type(2) {
-    padding-left: 90px;
+    width: 33.3%;
+    padding-left: 89px;
 
     @media (max-width: $desktop-width - 1) {
+      width: 43.6;
       padding-left: 50px;
 
       border-right: none;
     }
 
     @media (max-width: $tablet-width - 1) {
+      width: 100%;
+    }
+
+    @media (max-width: $tablet-width - 1) {
       padding-left: 0;
+      padding-right: 11px;
     }
   }
 
   &:last-of-type {
-    padding-left: 49px;
+    width: 32.2%;
+    padding-left: 48px;
+    padding-right: 9px;
 
     @media (max-width: $desktop-width - 1) {
       width: 100%;
-      margin-top: 30px;
+      margin-top: 18px;
       padding-top: 30px;
-      padding-left: 0;
+      padding-left: 10px;
 
       text-align: center;
 
@@ -80,6 +93,7 @@
     }
 
     @media (max-width: $tablet-width - 1) {
+      @include pad-center(0);
       margin-top: 0;
       border-top: none;
     }
@@ -88,7 +102,7 @@
 
 .footer__heading {
   @include reset-m-p;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   @include font-size-height(18px, 32px);
   font-weight: 600;
@@ -110,9 +124,19 @@
   @include font-size-height(14px, 17px);
   color: rgba($darkest-color, 0.5);
 
+  @media (max-width: $desktop-width - 1) {
+    width: 32%;
+  }
+
   @media (max-width: $tablet-width - 1) {
-    width: 50%;
-    margin-bottom: 20px;
+    width: 45%;
+    margin-bottom: 9px;
+  }
+
+  &:nth-child(2n) {
+    @media (max-width: $tablet-width - 1) {
+      margin-left: auto;
+    }
   }
 
   li {
@@ -122,7 +146,6 @@
 
 .footer__info {
   @include reset-m-p;
-
   @include font-size-height(14px, 24px);
   color: rgba($darkest-color, 0.5);
 }
