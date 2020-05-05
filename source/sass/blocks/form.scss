@@ -13,7 +13,7 @@
       margin-bottom: 0;
     }
 
-    .form__input {
+    .form__input-wrapper {
       margin-bottom: 20px;
 
       @media (max-width: $desktop-width - 1) {
@@ -39,14 +39,13 @@
   }
 }
 
-.form__input {
+.form__input-wrapper {
+  position: relative;
+
   width: 269px;
   min-height: 50px;
-  padding: 16px 15px 15px;
 
   @include font-size-height(14px, 17px);
-
-  border: 1px solid rgba($dark-color, 0.3);
 
   @media (max-width: $desktop-width - 1) {
     width: 48.2%;
@@ -56,6 +55,36 @@
     width: 100%;
     margin-bottom: 20px;
   }
+
+  &--tel {
+    &::after {
+      @include pseudo(absolute, "+7");
+      top: 17px;
+      left: 26px;
+    }
+
+    .form__input {
+      padding-left: 51px;
+    }
+  }
+
+  &--required {
+    &::before {
+      @include pseudo(absolute, "*");
+      top: 10px;
+      left: 14px;
+
+      font-size: 20px;
+      color: $accent-color;
+    }
+  }
+}
+
+.form__input {
+  width: 100%;
+  padding: 16px 15px 15px;
+
+  border: 1px solid rgba($dark-color, 0.3);
 
   &:hover {
     @media (min-width: $desktop-width) {
@@ -68,9 +97,28 @@
     outline: none;
   }
 
+  &:invalid {
+    border-color: $accent-color;
+
+    + .form__inavlid-data {
+      display: inline;
+    }
+  }
+
   &::placeholder {
     color: inherit;
   }
+}
+
+.form__inavlid-data {
+  position: absolute;
+  top: -15px;
+  left: 0;
+
+  display: none;
+
+  @include font-size-height(12px, 15px);
+  color: $accent-color;
 }
 
 .form__button {
