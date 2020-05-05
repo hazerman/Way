@@ -21,6 +21,24 @@
   }
 }
 
+@mixin only-full-width {
+  @media (min-width: $full-width) {
+    @content;
+  }
+}
+
+@mixin between-desktop-full {
+  @media (max-width: $full-width - 1) and (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin from-retina {
+  @media (min-resolution: $retina) {
+    @content;
+  }
+}
+
 @mixin list {
   margin: 0;
   padding: 0;

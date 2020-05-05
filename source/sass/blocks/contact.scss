@@ -20,7 +20,7 @@
 
   transform: translateX(32px);
 
-  @media (min-resolution: $retina) {
+  @include from-retina {
     background-image: url("../img/bg-questions-desktop@2x.jpg");
   }
 
@@ -33,7 +33,7 @@
 
     transform: none;
 
-    @media (min-resolution: $retina) {
+    @include from-retina {
       background-image: url("../img/bg-questions-tablet@2x.jpg");
     }
   }

@@ -42,7 +42,7 @@
       background-position: top left;
       background-size: 338px auto;
 
-      @media (min-resolution: $retina) {
+      @include from-retina {
         background-image: url("../img/bg-buy-desktop@2x.jpg");
       }
     }

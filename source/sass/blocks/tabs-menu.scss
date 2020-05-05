@@ -139,14 +139,14 @@
       &::after {
         background-image: url("../img/bg-feedback-#{$i}-desktop@1x.jpg");
 
-        @media (min-resolution: $retina) {
+        @include from-retina {
           background-image: url("../img/bg-feedback-#{$i}-desktop@2x.jpg");
         }
 
         @include until-desktop {
           background-image: url("../img/bg-feedback-#{$i}-tablet@1x.jpg");
 
-          @media (min-resolution: $retina) {
+          @include from-retina {
             background-image: url("../img/bg-feedback-#{$i}-tablet@2x.jpg");
           }
         }
@@ -154,7 +154,7 @@
         @include until-tablet {
           background-image: url("../img/bg-feedback-#{$i}-mobile@1x.jpg");
 
-          @media (min-resolution: $retina) {
+          @include from-retina {
             background-image: url("../img/bg-feedback-#{$i}-mobile@2x.jpg");
           }
         }
