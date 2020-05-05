@@ -463,6 +463,32 @@
       </div>
     </footer>
 
+    <div class="modal modal--buy">
+      <div class="modal__wrapper">
+        <p class="modal__heading">Купить тур</p>
+        <form class="modal__form form form--modal">
+          <div class="form_inputs-wrapper">
+            <label class="visually-hidden" for="phone-number">Введите ваш телефон</label>
+            <input class="form__input" type="tel" name="phone-number" id="phone-number" placeholder="Введите 10 цифр номера"
+              required>
+            <label class="visually-hidden" for="email">Введите ваш почтовый ящик</label>
+            <input class="form__input" type="email" name="email" id="email" placeholder="E-mail">
+          </div>
+          <button class="form__button button" type="submit">Отправить</button>
+        </form>
+      </div>
+      <button class="modal__button-close" type="button" aria-hidden="true">
+        <span class="visually-hidden">Закрыть попап</span>
+      </button>
+    </div>
+
+    <div class="modal modal--success">
+      <p class="modal__phrase">Форма успешно отправлена, спасибо! :)</p>
+      <button class="modal__button-close" type="button" aria-hidden="true">
+        <span class="visually-hidden">Закрыть попап</span>
+      </button>
+    </div>
+
     <script src="js/script.min.js"></script>
   </body>
 </html>
