@@ -2,12 +2,12 @@
   padding-top: 100px;
   padding-bottom: 120px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     padding-top: 40px;
     padding-bottom: 50px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     padding-bottom: 30px;
   }
 }
@@ -15,11 +15,11 @@
 .main__countries {
   margin-bottom: -4px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 78px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     margin-bottom: 5px;
   }
 }
@@ -30,7 +30,7 @@
   background-position: top 142px center;
   background-size: 1444px auto;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     background: none;
   }
 }
@@ -38,11 +38,11 @@
 .main__tabs-menu {
   margin-bottom: 96px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 39px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     margin-bottom: 22px;
   }
 }
@@ -50,11 +50,11 @@
 .main__offer {
   margin-bottom: 68px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 55px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     margin-bottom: 11px;
   }
 }

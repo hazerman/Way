@@ -13,7 +13,7 @@
 
   transform: translateX(-50%);
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     top: 0;
     left: 0;
     right: 0;
@@ -27,7 +27,7 @@
     transform: none;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     @include pad-center($screen-padding-mob);
   }
 
@@ -36,7 +36,7 @@
   }
 
   &--buy {
-    @media (min-width: $desktop-width) {
+    @include from-desktop {
       background-image: url("../img/bg-buy-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-position: top left;
@@ -58,7 +58,7 @@
   width: 270px;
   margin-left: auto;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     width: 100%;
     margin-left: 0;
   }
@@ -97,7 +97,7 @@
 
   cursor: pointer;
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 50px;
   }
 

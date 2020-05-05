@@ -2,13 +2,13 @@
   @include container;
   padding-bottom: 160px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     overflow: hidden;
 
     padding-bottom: 40px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     padding-bottom: 20px;
   }
 }
@@ -27,12 +27,12 @@
 
   border-bottom: 1px solid rgba($dark-color, 0.3);
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-left: 18px;
     margin-bottom: 32px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     margin-left: 0;
     margin-bottom: 24px;
   }
@@ -44,7 +44,7 @@
     text-decoration: none;
 
     &:hover {
-      @media (min-width: $desktop-width) {
+      @include from-desktop {
         color: rgba($dark-color, 0.7);
       }
     }
@@ -64,7 +64,7 @@
   display: flex;
   align-items: flex-start;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     display: block;
   }
 }
@@ -73,7 +73,7 @@
   width: 425px;
   margin-right: auto;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     position: relative;
 
     width: 100%;
@@ -83,7 +83,7 @@
     text-align: center;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     padding-bottom: 50px;
     margin-bottom: 50px;
   }
@@ -98,7 +98,7 @@
 
   display: none;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     position: static;
   }
 
@@ -118,7 +118,7 @@
     background-position: center;
     background-size: cover;
 
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       top: 100%;
       left: $screen-padding * -1;
 
@@ -127,7 +127,7 @@
       padding-bottom: 57%;
     }
 
-    @media (max-width: $tablet-width - 1) {
+    @include until-tablet {
       left: $screen-padding-mob * -1;
 
       padding-bottom: 144%;
@@ -142,7 +142,7 @@
         background-image: url("../img/bg-feedback-greece-desktop@2x.jpg");
       }
 
-      @media (max-width: $desktop-width - 1) {
+      @include until-desktop {
         background-image: url("../img/bg-feedback-greece-tablet@1x.jpg");
 
         @media (min-resolution: $retina) {
@@ -150,7 +150,7 @@
         }
       }
 
-      @media (max-width: $tablet-width - 1) {
+      @include until-tablet {
         background-image: url("../img/bg-feedback-greece-mobile@1x.jpg");
 
         @media (min-resolution: $retina) {
@@ -168,7 +168,7 @@
         background-image: url("../img/bg-feedback-albania-desktop@2x.jpg");
       }
 
-      @media (max-width: $desktop-width - 1) {
+      @include until-desktop {
         background-image: url("../img/bg-feedback-albania-tablet@1x.jpg");
 
         @media (min-resolution: $retina) {
@@ -176,7 +176,7 @@
         }
       }
 
-      @media (max-width: $tablet-width - 1) {
+      @include until-tablet {
         background-image: url("../img/bg-feedback-albania-mobile@1x.jpg");
 
         @media (min-resolution: $retina) {
@@ -194,7 +194,7 @@
         background-image: url("../img/bg-feedback-macedonia-desktop@2x.jpg");
       }
 
-      @media (max-width: $desktop-width - 1) {
+      @include until-desktop {
         background-image: url("../img/bg-feedback-macedonia-tablet@1x.jpg");
 
         @media (min-resolution: $retina) {
@@ -202,7 +202,7 @@
         }
       }
 
-      @media (max-width: $tablet-width - 1) {
+      @include until-tablet {
         background-image: url("../img/bg-feedback-macedonia-mobile@1x.jpg");
 
         @media (min-resolution: $retina) {
@@ -220,7 +220,7 @@
         background-image: url("../img/bg-feedback-montenegro-desktop@2x.jpg");
       }
 
-      @media (max-width: $desktop-width - 1) {
+      @include until-desktop {
         background-image: url("../img/bg-feedback-montenegro-tablet@1x.jpg");
 
         @media (min-resolution: $retina) {
@@ -228,7 +228,7 @@
         }
       }
 
-      @media (max-width: $tablet-width - 1) {
+      @include until-tablet {
         background-image: url("../img/bg-feedback-montenegro-mobile@1x.jpg");
 
         @media (min-resolution: $retina) {
@@ -246,7 +246,7 @@
         background-image: url("../img/bg-feedback-croatia-desktop@2x.jpg");
       }
 
-      @media (max-width: $desktop-width - 1) {
+      @include until-desktop {
         background-image: url("../img/bg-feedback-croatia-tablet@1x.jpg");
 
         @media (min-resolution: $retina) {
@@ -254,7 +254,7 @@
         }
       }
 
-      @media (max-width: $tablet-width - 1) {
+      @include until-tablet {
         background-image: url("../img/bg-feedback-croatia-mobile@1x.jpg");
 
         @media (min-resolution: $retina) {
@@ -275,14 +275,14 @@
   font-weight: 600;
   letter-spacing: -1.2px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 21px;
     letter-spacing: normal;
 
     @include font-size-height(30px, 45px);
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     @include font-size-height(24px, 36px);
   }
 
@@ -296,7 +296,7 @@
 
     background-color: $accent-color;
 
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       display: none;
     }
   }
@@ -311,12 +311,12 @@
   letter-spacing: -0.5px;
   color: rgba($dark-color, 0.7);
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     width: 100%;
     margin-bottom: 19px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     margin-bottom: 18px;
   }
 }
@@ -324,11 +324,11 @@
 .tabs-menu__button {
   width: 250px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     @include center;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 288px;
   }
 }
@@ -337,7 +337,7 @@
   position: relative;
   margin-top: 104px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     @include center;
     margin-top: 0;
   }

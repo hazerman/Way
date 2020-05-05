@@ -1,7 +1,7 @@
 .footer {
   color: $darkest-color;
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     text-align: center;
   }
 }
@@ -13,12 +13,12 @@
   padding-top: 50px;
   padding-bottom: 72px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     padding-top: 30px;
     padding-bottom: 48px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     padding-top: 10px;
     padding-bottom: 26px;
     display: block;
@@ -26,7 +26,7 @@
 }
 
 .footer__wrapper {
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 100%;
     padding-top: 30px;
   }
@@ -34,7 +34,7 @@
   &:not(:last-of-type) {
     border-right: 1px solid #d7d9df;
 
-    @media (max-width: $tablet-width - 1) {
+    @include until-tablet {
       border-right: none;
       border-bottom: 1px solid #d7d9df;
     }
@@ -44,13 +44,13 @@
     width: 34.5%;
     padding-left: 13px;
 
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       width: 54.4%;
       padding-left: 0;
       padding-right: 11px;
     }
 
-    @media (max-width: $tablet-width - 1) {
+    @include until-tablet {
       width: 100%;
     }
   }
@@ -59,18 +59,18 @@
     width: 33.3%;
     padding-left: 89px;
 
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       width: 43.6;
       padding-left: 50px;
 
       border-right: none;
     }
 
-    @media (max-width: $tablet-width - 1) {
+    @include until-tablet {
       width: 100%;
     }
 
-    @media (max-width: $tablet-width - 1) {
+    @include until-tablet {
       padding-left: 0;
       padding-right: 11px;
     }
@@ -81,7 +81,7 @@
     padding-left: 48px;
     padding-right: 9px;
 
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       width: 100%;
       margin-top: 18px;
       padding-top: 30px;
@@ -92,7 +92,7 @@
       border-top: 1px solid #d7d9df;
     }
 
-    @media (max-width: $tablet-width - 1) {
+    @include until-tablet {
       @include pad-center(0);
       margin-top: 0;
       border-top: none;
@@ -112,7 +112,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     justify-content: center;
   }
 }
@@ -124,17 +124,17 @@
   @include font-size-height(14px, 17px);
   color: rgba($darkest-color, 0.5);
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     width: 32%;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 45%;
     margin-bottom: 9px;
   }
 
   &:nth-child(2n) {
-    @media (max-width: $tablet-width - 1) {
+    @include until-tablet {
       margin-left: auto;
     }
   }

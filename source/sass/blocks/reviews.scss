@@ -4,11 +4,11 @@
 
   background-color: $white;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     padding: 30px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 268px;
     padding: 32px 20px;
 
@@ -26,11 +26,11 @@
   font-weight: 500;
   letter-spacing: -0.7px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 33px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     @include font-size-height(20px, 24px);
   }
 
@@ -44,7 +44,7 @@
 
     background-color: $accent-color;
 
-    @media (max-width: $tablet-width - 1) {
+    @include until-tablet {
       left: 50%;
 
       transform: translateX(-50%);
@@ -72,12 +72,12 @@
   letter-spacing: -0.4px;
   color: rgba($dark-color, 0.7);
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     @include pad-center(0);
     margin-bottom: 32px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     margin-bottom: 16px;
   }
 }
@@ -91,7 +91,7 @@
   font-weight: 500;
   letter-spacing: -1px;
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     flex-direction: column;
   }
 }
@@ -102,7 +102,7 @@
 
   border-radius: 50%;
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     margin-right: 0;
     margin-bottom: 10px;
   }

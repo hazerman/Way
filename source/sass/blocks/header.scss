@@ -5,7 +5,7 @@
   padding-top: 35px;
   padding-bottom: 33px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     position: relative;
 
     @include reset-m-p;
@@ -20,19 +20,19 @@
   height: 22px;
   margin-right: auto;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     width: 44px;
     height: auto;
     margin-top: 7px;
     margin-left: $screen-padding + 1px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     margin-left: $screen-padding-mob;
   }
 
   svg {
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       width: 44px;
       height: auto;
     }
@@ -42,7 +42,7 @@
 .header__button-toggle {
   display: none;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     position: relative;
 
     display: block;
@@ -53,12 +53,12 @@
     border: none;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 50px;
   }
 
   &::before {
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       @include pseudo(absolute);
       top: 17.5px;
       left: 50%;
@@ -78,7 +78,7 @@
   }
 
   &--show {
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       position: relative;
       z-index: 200;
 
@@ -87,7 +87,7 @@
 
     &::before,
     &::after {
-      @media (max-width: $desktop-width - 1) {
+      @include until-desktop {
         @include pseudo(absolute);
         top: 50%;
         left: 50%;
@@ -101,13 +101,13 @@
     }
 
     &::before {
-      @media (max-width: $desktop-width - 1) {
+      @include until-desktop {
         transform: translateX(-50%) rotate(-45deg);
       }
     }
 
     &::after {
-      @media (max-width: $desktop-width - 1) {
+      @include until-desktop {
         transform: translateX(-50%) rotate(45deg);
       }
     }
@@ -127,7 +127,7 @@
 .header__nav {
   margin-right: 60px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     position: absolute;
     top: 0;
     left: 0;
@@ -144,7 +144,7 @@
   }
 
   &--no-js {
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       position: static;
 
       display: block;
@@ -153,7 +153,7 @@
   }
 
   &--show {
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       display: block;
     }
   }
@@ -169,7 +169,7 @@
   font-weight: 500;
   color: $darkest-color;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     display: block;
 
     @include font-size-height(20px, 28px);
@@ -180,7 +180,7 @@
 .header__nav-item {
   margin-left: 40px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-right: 0;
     margin-bottom: 30px;
   }
@@ -189,7 +189,7 @@
     color: inherit;
     text-decoration: none;
 
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       display: flex;
       align-items: center;
       width: 100%;
@@ -202,7 +202,7 @@
     }
 
     &:hover {
-      @media (min-width: $desktop-width) {
+      @include from-desktop {
         color: $accent-color;
       }
     }
@@ -216,7 +216,7 @@
 .header__nav-arrow {
   display: none;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     display: block;
     margin-left: auto;
     margin-right: 8px;
@@ -239,7 +239,7 @@
     background-image: url("../img/bg-header-desktop@2x.jpg");
   }
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     min-height: 344px;
 
     background-image: url("../img/bg-header-tablet@1x.jpg");
@@ -249,7 +249,7 @@
     }
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     min-height: auto;
 
     background-image: url("../img/bg-header-mobile@1x.jpg");
@@ -275,7 +275,7 @@
 
   color: $white;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-top: 60px;
     margin-right: auto;
     width: 398px;
@@ -283,7 +283,7 @@
     text-align: center;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 100%;
     margin-top: 81px;
     margin-right: 0;
@@ -299,14 +299,14 @@
   font-weight: 600;
   letter-spacing: -1.1px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 16px;
 
     @include font-size-height(30px, 45px);
     letter-spacing: normal;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     min-height: 154px;
     margin-bottom: 20px;
     padding-left: 6px;
@@ -323,12 +323,12 @@
   @include font-size-height(16px, 27px);
   letter-spacing: -0.5px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 9px;
     padding-right: 0;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     margin-bottom: 20px;
 
     color: $dark-color;
@@ -342,14 +342,14 @@
 
   text-align: left;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     @include center;
     width: 250px;
     padding-top: 18px;
     padding-bottom: 15px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 288px;
   }
 }

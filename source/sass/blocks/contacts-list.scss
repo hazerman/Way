@@ -4,7 +4,7 @@
   color: $accent-color;
 
   &--header {
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       display: none;
     }
 
@@ -16,7 +16,7 @@
   &--offer {
     color: $black;
 
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       color: $accent-color;
     }
 
@@ -24,7 +24,7 @@
       font-size: 20px;
       text-decoration: none;
 
-      @media (max-width: $desktop-width - 1) {
+      @include until-desktop {
         display: block;
 
         font-size: 18px;
@@ -32,7 +32,7 @@
       }
 
       &:hover {
-        @media (min-width: $desktop-width) {
+        @include from-desktop {
           color: $accent-color;
           text-decoration: underline;
         }
@@ -42,7 +42,7 @@
     svg {
       margin-right: 30px;
 
-      @media (max-width: $desktop-width - 1) {
+      @include until-desktop {
         display: none;
       }
     }
@@ -53,7 +53,7 @@
 
     @include font-size-height(14px, 17px);
 
-    @media (max-width: $tablet-width - 1) {
+    @include until-tablet {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -88,14 +88,14 @@
   }
 
   &:hover {
-    @media (min-width: $desktop-width) {
+    @include from-desktop {
       color: $black;
       text-decoration: none;
     }
   }
 
   &:active {
-    @media (min-width: $desktop-width) {
+    @include from-desktop {
       opacity: 0.7;
     }
   }
@@ -109,13 +109,13 @@
   &:first-of-type {
     display: none;
 
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       display: inline;
     }
   }
 
   &:last-of-type {
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       display: none;
     }
   }

@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     display: block;
   }
 
@@ -16,7 +16,7 @@
     .form__input-wrapper {
       margin-bottom: 20px;
 
-      @media (max-width: $desktop-width - 1) {
+      @include until-desktop {
         width: 100%;
       }
     }
@@ -29,11 +29,11 @@
   width: 100%;
   margin-bottom: 25px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 21px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     display: block;
     margin-bottom: 0;
   }
@@ -47,11 +47,11 @@
 
   @include font-size-height(14px, 17px);
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     width: 48.2%;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -87,7 +87,7 @@
   border: 1px solid rgba($dark-color, 0.3);
 
   &:hover {
-    @media (min-width: $desktop-width) {
+    @include from-desktop {
       border-color: $dark-color;
     }
   }
@@ -127,11 +127,11 @@
   padding-top: 18px;
   padding-bottom: 17px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     width: 250px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 100%;
   }
 }

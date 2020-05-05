@@ -2,13 +2,13 @@
   @include container;
   padding-top: 99px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     padding-top: 40px;
 
     text-align: center;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     padding-top: 69px;
   }
 }
@@ -24,7 +24,7 @@
   font-weight: 600;
   letter-spacing: -1.2px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     width: 100%;
     margin-bottom: 21px;
 
@@ -32,12 +32,12 @@
     letter-spacing: normal;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     @include font-size-height(24px, 36px);
   }
 
   &::after {
-    @media (min-width: $desktop-width) {
+    @include from-desktop {
       @include pseudo(absolute);
       bottom: -33px;
       left: 0;
@@ -59,12 +59,12 @@
   color: rgba($dark-color, 0.7);
   letter-spacing: -0.5px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     @include center;
     margin-bottom: 39px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 100%;
     margin-bottom: 18px;
   }
@@ -81,11 +81,11 @@
     justify-content: space-around;
   }
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     @include pad-center(61px);
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     @include pad-center(0);
     flex-direction: column;
   }
@@ -101,22 +101,22 @@
     margin-left: 10px;
   }
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 19px;
     width: 47.59%;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 100%;
     margin-bottom: 35px;
   }
 
   &:last-child {
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       margin-top: 11px;
     }
 
-    @media (max-width: $tablet-width - 1) {
+    @include until-tablet {
       margin-top: 0;
     }
   }
@@ -134,7 +134,7 @@
   }
 
   &:nth-child(2n+1):not(:last-child) {
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       margin-right: auto;
     }
   }
@@ -151,7 +151,7 @@
   height: auto;
   display: block;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     width: 100%;
   }
 }

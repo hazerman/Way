@@ -3,6 +3,24 @@
   line-height: $f-height;
 }
 
+@mixin until-desktop {
+  @media (max-width: $desktop-width - 1) {
+    @content;
+  }
+}
+
+@mixin until-tablet {
+  @media (max-width: $tablet-width - 1) {
+    @content;
+  }
+}
+
+@mixin from-desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
 @mixin list {
   margin: 0;
   padding: 0;

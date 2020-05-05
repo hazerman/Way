@@ -3,12 +3,12 @@
   display: flex;
   padding-bottom: 70px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     display: block;
     text-align: center;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     padding-bottom: 10px;
   }
 }
@@ -19,14 +19,14 @@
   margin-top: 112px;
   margin-right: -6px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     width: 100%;
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 29px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     margin-bottom: 40px;
   }
 }
@@ -40,13 +40,13 @@
   @include font-size-height(55px, 90px);
   font-weight: 600;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 20px;
 
     @include font-size-height(30px, 45px);
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     @include font-size-height(24px, 36px);
   }
 
@@ -60,7 +60,7 @@
 
     background-color: $accent-color;
 
-    @media (max-width: $desktop-width - 1) {
+    @include until-desktop {
       display: none;
     }
   }
@@ -73,11 +73,11 @@
   @include font-size-height(16px, 27px);
   color: rgba($dark-color, 0.7);
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 33px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     margin-bottom: 19px;
   }
 }
@@ -91,14 +91,14 @@
   font-weight: 500;
   text-align: center;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-left: 0;
     margin-bottom: 11px;
 
     font-size: 18px;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     margin-bottom: 10px;
   }
 }
@@ -110,13 +110,13 @@
   width: 770px;
   margin-right: auto;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     @include pad-center(51px);
     width: 100%;
     margin-right: 0;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     @include pad-center(0);
     display: block;
   }
@@ -135,7 +135,7 @@
   border: 1px solid rgba($dark-color, 0.3);
   border-radius: 6px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     position: relative;
 
     display: block;
@@ -147,7 +147,7 @@
     border-bottom-right-radius: 0;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     width: 100%;
     min-height: 600px;
     margin-bottom: 30px;
@@ -175,7 +175,7 @@
       &:first-child {
         margin-bottom: 7px;
 
-        @media (max-width: $desktop-width - 1) {
+        @include until-desktop {
           margin-bottom: 5px;
         }
       }
@@ -197,7 +197,7 @@
   letter-spacing: -1.3px;
   color: rgba($darkest-color, 0.7);
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 10px;
 
     @include font-size-height(24px, 34px);
@@ -209,7 +209,7 @@
   font-weight: 700;
   color: rgba($darkest-color, 0.7);
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     display: block;
     margin-bottom: 11px;
   }
@@ -227,7 +227,7 @@
   border-bottom-style: solid;
   border-bottom-color: rgba($dark-color, 0.3);
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     margin-bottom: 22px;
     padding-bottom: 8px;
     padding-right: 0;
@@ -240,11 +240,11 @@
 
   @include font-size-height(16px, 32px);
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     text-align: left;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     min-height: 200px;
     margin-bottom: 46px;
   }
@@ -255,7 +255,7 @@
   margin-bottom: 15px;
   padding-right: 30px;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     padding-right: 0;
     margin-bottom: 10px;
   }
@@ -273,7 +273,7 @@
   width: 100%;
   margin-top: auto;
 
-  @media (max-width: $desktop-width - 1) {
+  @include until-desktop {
     position: absolute;
     bottom: -1px;
     left: -1px;
