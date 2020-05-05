@@ -134,131 +134,29 @@
     }
   }
 
-  &:first-child {
-    &::after {
-      background-image: url("../img/bg-feedback-greece-desktop@1x.jpg");
-
-      @media (min-resolution: $retina) {
-        background-image: url("../img/bg-feedback-greece-desktop@2x.jpg");
-      }
-
-      @include until-desktop {
-        background-image: url("../img/bg-feedback-greece-tablet@1x.jpg");
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      &::after {
+        background-image: url("../img/bg-feedback-#{$i}-desktop@1x.jpg");
 
         @media (min-resolution: $retina) {
-          background-image: url("../img/bg-feedback-greece-tablet@2x.jpg");
+          background-image: url("../img/bg-feedback-#{$i}-desktop@2x.jpg");
         }
-      }
 
-      @include until-tablet {
-        background-image: url("../img/bg-feedback-greece-mobile@1x.jpg");
+        @include until-desktop {
+          background-image: url("../img/bg-feedback-#{$i}-tablet@1x.jpg");
 
-        @media (min-resolution: $retina) {
-          background-image: url("../img/bg-feedback-greece-mobile@2x.jpg");
+          @media (min-resolution: $retina) {
+            background-image: url("../img/bg-feedback-#{$i}-tablet@2x.jpg");
+          }
         }
-      }
-    }
-  }
 
-  &:nth-child(2) {
-    &::after {
-      background-image: url("../img/bg-feedback-albania-desktop@1x.jpg");
+        @include until-tablet {
+          background-image: url("../img/bg-feedback-#{$i}-mobile@1x.jpg");
 
-      @media (min-resolution: $retina) {
-        background-image: url("../img/bg-feedback-albania-desktop@2x.jpg");
-      }
-
-      @include until-desktop {
-        background-image: url("../img/bg-feedback-albania-tablet@1x.jpg");
-
-        @media (min-resolution: $retina) {
-          background-image: url("../img/bg-feedback-albania-tablet@2x.jpg");
-        }
-      }
-
-      @include until-tablet {
-        background-image: url("../img/bg-feedback-albania-mobile@1x.jpg");
-
-        @media (min-resolution: $retina) {
-          background-image: url("../img/bg-feedback-albania-mobile@2x.jpg");
-        }
-      }
-    }
-  }
-
-  &:nth-child(3) {
-    &::after {
-      background-image: url("../img/bg-feedback-macedonia-desktop@1x.jpg");
-
-      @media (min-resolution: $retina) {
-        background-image: url("../img/bg-feedback-macedonia-desktop@2x.jpg");
-      }
-
-      @include until-desktop {
-        background-image: url("../img/bg-feedback-macedonia-tablet@1x.jpg");
-
-        @media (min-resolution: $retina) {
-          background-image: url("../img/bg-feedback-macedonia-tablet@2x.jpg");
-        }
-      }
-
-      @include until-tablet {
-        background-image: url("../img/bg-feedback-macedonia-mobile@1x.jpg");
-
-        @media (min-resolution: $retina) {
-          background-image: url("../img/bg-feedback-macedonia-mobile@2x.jpg");
-        }
-      }
-    }
-  }
-
-  &:nth-child(4) {
-    &::after {
-      background-image: url("../img/bg-feedback-montenegro-desktop@1x.jpg");
-
-      @media (min-resolution: $retina) {
-        background-image: url("../img/bg-feedback-montenegro-desktop@2x.jpg");
-      }
-
-      @include until-desktop {
-        background-image: url("../img/bg-feedback-montenegro-tablet@1x.jpg");
-
-        @media (min-resolution: $retina) {
-          background-image: url("../img/bg-feedback-montenegro-tablet@2x.jpg");
-        }
-      }
-
-      @include until-tablet {
-        background-image: url("../img/bg-feedback-montenegro-mobile@1x.jpg");
-
-        @media (min-resolution: $retina) {
-          background-image: url("../img/bg-feedback-montenegro-mobile@2x.jpg");
-        }
-      }
-    }
-  }
-
-  &:nth-child(5) {
-    &::after {
-      background-image: url("../img/bg-feedback-croatia-desktop@1x.jpg");
-
-      @media (min-resolution: $retina) {
-        background-image: url("../img/bg-feedback-croatia-desktop@2x.jpg");
-      }
-
-      @include until-desktop {
-        background-image: url("../img/bg-feedback-croatia-tablet@1x.jpg");
-
-        @media (min-resolution: $retina) {
-          background-image: url("../img/bg-feedback-croatia-tablet@2x.jpg");
-        }
-      }
-
-      @include until-tablet {
-        background-image: url("../img/bg-feedback-croatia-mobile@1x.jpg");
-
-        @media (min-resolution: $retina) {
-          background-image: url("../img/bg-feedback-croatia-mobile@2x.jpg");
+          @media (min-resolution: $retina) {
+            background-image: url("../img/bg-feedback-#{$i}-mobile@2x.jpg");
+          }
         }
       }
     }
