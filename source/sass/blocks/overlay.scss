@@ -1,14 +1,16 @@
 .overlay {
-  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 400;
 
-  &::after {
-    @include pseudo(fixed);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 400;
+  display: none;
 
-    background-color: rgba($accent-color, 0.3);
+  background-color: rgba($accent-color, 0.3);
+
+  &--show {
+    display: block;
   }
 }
