@@ -39,24 +39,24 @@
 }
 
 .tabs-menu__tab-item {
-  a {
-    color: inherit;
-    text-decoration: none;
+  &:not(:last-child) {
+    margin-right: 100px;
+  }
+}
 
-    &:hover {
-      @include from-desktop {
-        color: rgba($dark-color, 0.7);
-      }
+.tabs-menu__tab-link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    @include from-desktop {
+      color: rgba($dark-color, 0.7);
     }
   }
 
   &--current {
     @include current;
     color: $accent-color;
-  }
-
-  &:not(:last-child) {
-    margin-right: 100px;
   }
 }
 
