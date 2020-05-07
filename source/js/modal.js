@@ -57,9 +57,21 @@
     });
   });
 
+  var getValidityMessage = function (input) {
+    if (!input.value) {
+      input.setAttribute('required', '');
+      return 'Номер телефона обязателен';
+    }
+    input.removeAttribute('required');
+    return '';
+  };
+
   document.querySelectorAll('form').forEach(function (item) {
     var inputTel = item.querySelector('input[type=tel]');
     var inputEmail = item.querySelector('input[type=email]');
+    inputTel.addEventListener('input', function () {
+      inputTel.setCustomValidity(getValidityMessage(inputTel));
+    });
     inputTel.value = localStorage.getItem('tel');
     inputEmail.value = localStorage.getItem('email');
     item.addEventListener('submit', function (evt) {
