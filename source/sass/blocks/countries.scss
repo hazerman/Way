@@ -107,7 +107,9 @@
   }
 
   @include until-tablet {
+    @include center;
     width: 100%;
+    max-width: 475px;
     margin-bottom: 35px;
   }
 

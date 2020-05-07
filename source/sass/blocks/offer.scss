@@ -158,7 +158,7 @@
 
   @include until-tablet {
     width: 100%;
-    min-height: 600px;
+    min-height: auto;
     margin-bottom: 30px;
   }
 
