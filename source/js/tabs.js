@@ -17,6 +17,7 @@
     tabButtons[newIndex].classList.add('tabs-menu__tab-link' + CURRENT_MOD);
     tabCountries[newIndex].classList.add('tabs-menu__countries-item' + CURRENT_MOD);
     tabReviews[newIndex].classList.add('reviews__item' + CURRENT_MOD);
+    tabButtons[newIndex].focus();
     currentIndex = newIndex;
   };
 
