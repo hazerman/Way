@@ -13,10 +13,26 @@
   }
 }
 
+.tabs-menu__swipe-container {
+  @include pad-center($screen-padding);
+  @include center;
+  width: $full-width;
+
+  @include until-desktop {
+    overflow-x: scroll;
+    width: 100%;
+  }
+
+  @include until-tablet {
+    @include pad-center($screen-padding-mob);
+  }
+}
+
 .tabs-menu__tab-list {
   @include list;
   display: flex;
-  width: 899px;
+  flex-wrap: wrap;
+  width: 904px;
   padding-bottom: 15px;
   margin-bottom: 89px;
 
@@ -28,6 +44,7 @@
   border-bottom: 1px solid rgba($dark-color, 0.3);
 
   @include until-desktop {
+    flex-wrap: nowrap;
     margin-left: 18px;
     margin-bottom: 32px;
   }
