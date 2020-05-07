@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title lang="en">Way</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/montserrat-600.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-400.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
 
@@ -88,7 +90,7 @@
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/visit-greece-tablet@1x.webp 1x, img/visit-greece-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/visit-greece-desktop@1x.webp 1x, img/visit-greece-desktop@2x.webp 2x">
                 <source media="(max-width: 1023px)" srcset="img/visit-greece-tablet@1x.jpg 1x, img/visit-greece-tablet@2x.jpg 2x">
-                <img class="countries__img" src="img/visit-greece-desktop@1x.jpg" srcset="img/visit-greece-desktop@2x.jpg 2x" width="350" height="430" alt="Виды Греции">
+                <img class="countries__img" src="img/visit-greece-desktop@1x.jpg" srcset="img/visit-greece-desktop@2x.jpg 2x" width="350" height="430" alt="Виды Греции" loading="lazy">
               </picture>
               <span class="countries__name">Греция</span>
               <div class="countries__overlay">
@@ -101,7 +103,7 @@
                 <source type="image/webp" srcset="img/visit-albania-desktop@1x.webp 1x, img/visit-albania-desktop@2x.webp 2x">
                 <source media="(max-width: 1023px)" srcset="img/visit-albania-tablet@1x.jpg 1x, img/visit-albania-tablet@2x.jpg 2x">
                 <img class="countries__img" src="img/visit-albania-desktop@1x.jpg" srcset="img/visit-albania-desktop@2x.jpg 2x"
-                  width="350" height="430" alt="Виды Албании">
+                  width="350" height="430" alt="Виды Албании" loading="lazy">
               </picture>
               <span class="countries__name">Албания</span>
               <div class="countries__overlay">
@@ -114,7 +116,7 @@
                 <source type="image/webp" srcset="img/visit-macedonia-desktop@1x.webp 1x, img/visit-macedonia-desktop@2x.webp 2x">
                 <source media="(max-width: 1023px)" srcset="img/visit-macedonia-tablet@1x.jpg 1x, img/visit-macedonia-tablet@2x.jpg 2x">
                 <img class="countries__img" src="img/visit-macedonia-desktop@1x.jpg" srcset="img/visit-macedonia-desktop@2x.jpg 2x"
-                  width="350" height="430" alt="Виды Македонии">
+                  width="350" height="430" alt="Виды Македонии" loading="lazy">
               </picture>
               <span class="countries__name">Македония</span>
               <div class="countries__overlay">
@@ -127,7 +129,7 @@
                 <source type="image/webp" srcset="img/visit-montenegro-desktop@1x.webp 1x, img/visit-montenegro-desktop@2x.webp 2x">
                 <source media="(max-width: 1023px)" srcset="img/visit-montenegro-tablet@1x.jpg 1x, img/visit-montenegro-tablet@2x.jpg 2x">
                 <img class="countries__img" src="img/visit-montenegro-desktop@1x.jpg" srcset="img/visit-montenegro-desktop@2x.jpg 2x"
-                  width="350" height="430" alt="Виды Черногории">
+                  width="350" height="430" alt="Виды Черногории" loading="lazy">
               </picture>
               <span class="countries__name">Черногория</span>
               <div class="countries__overlay">
@@ -140,7 +142,7 @@
                 <source type="image/webp" srcset="img/visit-croatia-desktop@1x.webp 1x, img/visit-croatia-desktop@2x.webp 2x">
                 <source media="(max-width: 1023px)" srcset="img/visit-croatia-tablet@1x.jpg 1x, img/visit-croatia-tablet@2x.jpg 2x">
                 <img class="countries__img" src="img/visit-croatia-desktop@1x.jpg" srcset="img/visit-croatia-desktop@2x.jpg 2x"
-                  width="350" height="430" alt="Виды Хорватии">
+                  width="350" height="430" alt="Виды Хорватии" loading="lazy">
               </picture>
               <span class="countries__name">Хорватия</span>
               <div class="countries__overlay">
@@ -229,7 +231,7 @@
                     <span class="reviews__author">
                       <picture>
                         <source type="image/webp" srcset="img/userpic-greece@1x.webp 1x, img/userpic-greece@2x.webp 2x">
-                        <img class="reviews__author-img" src="img/userpic-greece@1x.png" srcset="img/userpic-greece@2x.png 2x" width="38" height="38" alt="Аватар пользователя Влада Голицина">
+                        <img class="reviews__author-img" src="img/userpic-greece@1x.png" srcset="img/userpic-greece@2x.png 2x" width="38" height="38" alt="Аватар пользователя Влада Голицина" loading="lazy">
                       </picture>
                       Влада Голицина
                     </span>
@@ -242,7 +244,7 @@
                       <picture>
                         <source type="image/webp" srcset="img/userpic-albania@1x.webp 1x, img/userpic-albania@2x.webp 2x">
                         <img class="reviews__author-img" src="img/userpic-albania@1x.png" srcset="img/userpic-albania@2x.png 2x" width="38"
-                          height="38" alt="Аватар пользователя Маришка">
+                          height="38" alt="Аватар пользователя Маришка" loading="lazy">
                       </picture>
                       Маришка
                     </span>
@@ -256,7 +258,7 @@
                       <picture>
                         <source type="image/webp" srcset="img/userpic-macedonia@1x.webp 1x, img/userpic-macedonia@2x.webp 2x">
                         <img class="reviews__author-img" src="img/userpic-macedonia@1x.png" srcset="img/userpic-macedonia@2x.png 2x" width="38"
-                          height="38" alt="Аватар пользователя Михаил Кузьмин">
+                          height="38" alt="Аватар пользователя Михаил Кузьмин" loading="lazy">
                       </picture>
                       Михаил Кузьмин
                     </span>
@@ -268,7 +270,7 @@
                       <picture>
                         <source type="image/webp" srcset="img/userpic-montenegro@1x.webp 1x, img/userpic-montenegro@2x.webp 2x">
                         <img class="reviews__author-img" src="img/userpic-montenegro@1x.png" srcset="img/userpic-montenegro@2x.png 2x" width="38"
-                          height="38" alt="Аватар пользователя Анастасия Мей">
+                          height="38" alt="Аватар пользователя Анастасия Мей" loading="lazy">
                       </picture>
                       Анастасия Мей
                     </span>
@@ -282,7 +284,7 @@
                       <picture>
                         <source type="image/webp" srcset="img/userpic-croatia@1x.webp 1x, img/userpic-croatia@2x.webp 2x">
                         <img class="reviews__author-img" src="img/userpic-croatia@1x.png" srcset="img/userpic-croatia@2x.png 2x" width="38"
-                          height="38" alt="Аватар пользователя Владимир Мулицин">
+                          height="38" alt="Аватар пользователя Владимир Мулицин" loading="lazy">
                       </picture>
                       Владимир Мулицин
                     </span>
