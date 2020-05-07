@@ -79,7 +79,9 @@
 
   &--show {
     @include until-desktop {
-      position: relative;
+      position: fixed;
+      top: 0;
+      right: 0;
       z-index: 200;
 
       background-color: $white;
@@ -128,7 +130,7 @@
   margin-right: 60px;
 
   @include until-desktop {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
@@ -155,6 +157,7 @@
   &--show {
     @include until-desktop {
       display: block;
+      overflow: hidden;
     }
   }
 }
@@ -165,12 +168,17 @@
   flex-wrap: wrap;
   max-width: 650px;
 
+  @include between-desktop-full {
+    min-width: 480px;
+  }
+
   @include font-size-height(14px, 17px);
   font-weight: 500;
   color: $darkest-color;
 
   @include until-desktop {
     display: block;
+    max-width: none;
 
     @include font-size-height(20px, 28px);
     font-weight: 600;
@@ -181,7 +189,7 @@
   margin-left: 40px;
 
   @include until-desktop {
-    margin-right: 0;
+    margin-left: 0;
     margin-bottom: 30px;
   }
 

@@ -59,6 +59,10 @@
     width: 33.3%;
     padding-left: 89px;
 
+    @include between-desktop-full {
+      padding-left: 60px;
+    }
+
     @include until-desktop {
       width: 43.6;
       padding-left: 50px;

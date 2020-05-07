@@ -106,9 +106,14 @@
 .offer__price-list {
   @include list;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 770px;
   margin-right: auto;
+
+  @include between-desktop-full {
+    width: 67%;
+  }
 
   @include until-desktop {
     @include pad-center(51px);
@@ -134,6 +139,10 @@
   background-color: $white;
   border: 1px solid rgba($dark-color, 0.3);
   border-radius: 6px;
+
+  @include between-desktop-full {
+    width: 48%;
+  }
 
   @include until-desktop {
     position: relative;
@@ -197,6 +206,10 @@
   letter-spacing: -1.3px;
   color: rgba($darkest-color, 0.7);
 
+  @include between-desktop-full {
+    margin-bottom: 10px;
+  }
+
   @include until-desktop {
     margin-bottom: 10px;
 
@@ -208,6 +221,11 @@
   @include font-size-height(25px, 34px);
   font-weight: 700;
   color: rgba($darkest-color, 0.7);
+
+  @include between-desktop-full {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
   @include until-desktop {
     display: block;

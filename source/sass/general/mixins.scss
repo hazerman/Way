@@ -3,6 +3,12 @@
   line-height: $f-height;
 }
 
+@mixin until-full {
+  @media (max-width: $full-width - 1) {
+    @content;
+  }
+}
+
 @mixin until-desktop {
   @media (max-width: $desktop-width - 1) {
     @content;
@@ -66,12 +72,12 @@
   @include center;
   width: $full-width;
 
-  @media (max-width: $full-width - 1) {
+  @include until-full {
     width: 100%;
     margin: 0;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @include until-tablet {
     @include pad-center($screen-padding-mob);
   }
 }
