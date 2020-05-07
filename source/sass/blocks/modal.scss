@@ -122,7 +122,13 @@
     transform: translateX(-50%) rotate(45deg);
   }
 
+  &:hover {
+    @include from-desktop {
+      opacity: 0.7;
+    }
+  }
+
   &:active {
-    opacity: 0.7;
+    opacity: 0.6;
   }
 }
