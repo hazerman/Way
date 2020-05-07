@@ -2,7 +2,7 @@
 
 (function () {
   var CURRENT_MOD = '--current';
-  var tabButtonsArea = document.querySelector('.tabs-menu__tab-list')
+  var tabButtonsArea = document.querySelector('.tabs-menu__tab-list');
   var tabButtons = tabButtonsArea.querySelectorAll('.tabs-menu__tab-link');
   var tabCountries = document.querySelectorAll('.tabs-menu__countries-item');
   var tabReviews = document.querySelectorAll('.reviews__item');
