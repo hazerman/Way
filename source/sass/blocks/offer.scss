@@ -162,36 +162,26 @@
     margin-bottom: 30px;
   }
 
-  &--special {
+  &:hover {
+    @include from-desktop {
+      border-color: $accent-color;
+      box-shadow: 0 0 0 1px $accent-color, 0 0 0 1px $accent-color inset;
 
-    border-color: $accent-color;
-    box-shadow: 0 0 0 1px $accent-color, 0 0 0 1px $accent-color inset;
-
-    .offer__price-heading {
-      color: $accent-color;
-      letter-spacing: normal;
-    }
-
-    .offer__price-count {
-      color: $accent-color;
-    }
-
-    .offer__price-description {
-      border-bottom-color: rgba($accent-color, 0.5);
-    }
-
-    .offer__feature-item {
-      &:first-child {
-        margin-bottom: 7px;
-
-        @include until-desktop {
-          margin-bottom: 5px;
-        }
+      .offer__price-heading {
+        color: $accent-color;
       }
-    }
 
-    svg {
-      fill: $darkest-color;
+      .offer__price-count {
+        color: $accent-color;
+      }
+
+      .offer__price-description {
+        border-bottom-color: rgba($accent-color, 0.5);
+      }
+
+      svg {
+        fill: $darkest-color;
+      }
     }
   }
 }
@@ -218,12 +208,15 @@
 }
 
 .offer__price-count {
+  margin-top: 3px;
+
   @include font-size-height(25px, 34px);
   font-weight: 700;
   color: rgba($darkest-color, 0.7);
 
   @include between-desktop-full {
     width: 100%;
+    margin-top: 0;
     margin-bottom: 20px;
   }
 
